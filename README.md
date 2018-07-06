@@ -4,6 +4,7 @@ Learning Java web services with Spring
 
 
 ## Prerequisites ##
+- [Windows] - version 10
 - [Java](https://java.com) - version 1.8.0
 - [Eclipse IDE for Java Developers](http://www.eclipse.org/) - version 4.8.0
 - [Buildship Gradle Integration to Eclipse](https://projects.eclipse.org/projects/tools.buildship) - version 2.0
@@ -72,14 +73,26 @@ You can install with a package manager. Go check [their website](https://gradle.
 - Choose Java
 - Choose Spring Boot version 2.0.3
 - Fill Group field. For example com.example
-- Fill Artifact field. FOr example webservice
+- Fill Artifact field. For example webservice
 - Choose Dependencies. You can search dependencies, for now I just use MySQL 
 - Click Generate Project
 
 ![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/Generate-Spring-Boot.JPG)
 
 
--
+### Starting Create Project ###
+1. Extract generated spring project folder
+2. Click File > New > Others...
+
+![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-1.jpg)
+
+3. Name your project name, then click finish
+
+![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-2.jpg)
+
+![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-3.jpg)
+
+
 
 
 
