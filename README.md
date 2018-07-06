@@ -133,4 +133,4 @@ You can install with a package manager. Go check [their website](https://gradle.
 ---
 
 
-** Not Fixed yet. I'll Update later **
+**Not Fixed yet. I'll Update later**
