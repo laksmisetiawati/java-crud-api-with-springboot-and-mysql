@@ -80,15 +80,15 @@ You can install with a package manager. Go check [their website](https://gradle.
 
 
 ### Starting Create Project ###
-1. Extract generated spring project folder, my folder named 'webservice'
-2. Copy-paste 'webservice' into eclipse workspace location, in my case F:\eclipse-workspace
+1. Extract generated spring project folder, my folder named `webservice`
+2. Copy-paste `webservice` into eclipse workspace location, in my case `F:\eclipse-workspace`
 3. Open Projects from File System...
-4. Choose directory, in my case F:\eclipse-workspace\webservice, click finish
+4. Choose directory, in my case `F:\eclipse-workspace\webservice`, click finish
 
 	![Image of Choose directory existing project](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/import-projects.jpg)
 
-5. Create new package com.link.webservice.entity under src/main/java
-6. Create POJO (Plain Old Java Object) Alamat.java on package com.link.webservice.entity
+5. Create new package `com.link.webservice.entity` under `src/main/java`
+6. Create POJO (Plain Old Java Object) `Alamat.java` on package `com.link.webservice.entity`
 	
 	```Java
 	package com.link.webservice.entity;
@@ -126,9 +126,9 @@ You can install with a package manager. Go check [their website](https://gradle.
 ### Error Handling ###
 
 - The import org.springframework cannot be resolved
-file: WebserviceApplication.java
-package: com.link.webservice
-line: 3 import org.springframework.boot.SpringApplication;
+file: WebserviceApplication.java 
+package: com.link.webservice 
+line: 3 import org.springframework.boot.SpringApplication; 
 how to fix
 1. Right click project, click import...
 
