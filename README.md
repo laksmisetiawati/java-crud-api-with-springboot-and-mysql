@@ -1,10 +1,10 @@
 ## Java Web Services with Spring Boot and MySQL ##
-Learning Java web services with Spring
+Learning Java web services with Spring. Screenshots and example of codes are provided. I hope it'll be help.
 
 
 
 ## Prerequisites ##
-- [Windows] - version 10
+- Windows - version 10
 - [Java](https://java.com) - version 1.8.0
 - [Eclipse IDE for Java Developers](http://www.eclipse.org/) - version 4.8.0
 - [Buildship Gradle Integration to Eclipse](https://projects.eclipse.org/projects/tools.buildship) - version 2.0
@@ -33,7 +33,7 @@ Step to install and setup manually:
 Different Gradle binary format and complete format
 > gradle-x.xx-all.zip file will have binaries, sources and documentation, gradle-x.xx-bin.zip will have only binaries 
 (That should be enough as you dont need any samples/docs)
-©San
+© copied from San
 ```
 - Extract zip file and copy-paste to your folder, for example C:\Program Files\Gradle
 - Open Control Panel to starting add the environment variable GRADLE_HOME
@@ -81,16 +81,50 @@ You can install with a package manager. Go check [their website](https://gradle.
 
 
 ### Starting Create Project ###
-1. Extract generated spring project folder
+1. Extract generated spring project folder, my folder named 'webservice'
 2. Click File > New > Others...
 
-![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-1.jpg)
+	![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-1.jpg)
 
-3. Name your project name, then click finish
+3. Name your project name, my folder named 'java-webservice', then click finish
 
-![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-2.jpg)
+	![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-2.jpg)
 
-![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-3.jpg)
+	![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-3.jpg)
+
+4. Copy file build.gradle from 'webservice' folder and replace file build.gradle from 'java-webservice' folder. For example: 
+	
+	```gradle
+	buildscript {
+		ext {
+			springBootVersion = '2.0.3.RELEASE'
+		}
+		repositories {
+			mavenCentral()
+		}
+		dependencies {
+			classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		}
+	}
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	apply plugin: 'org.springframework.boot'
+	apply plugin: 'io.spring.dependency-management'
+	group = 'com.example'
+	version = '0.0.1-SNAPSHOT'
+	sourceCompatibility = 1.8
+	// In this section you declare where to find the dependencies of your project
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		compile('org.springframework.boot:spring-boot-starter')
+		runtime('mysql:mysql-connector-java')
+		testCompile('org.springframework.boot:spring-boot-starter-test')
+	}
+	```
+
+5. 
 
 
 
@@ -99,4 +133,4 @@ You can install with a package manager. Go check [their website](https://gradle.
 ---
 
 
-** I'll Update later **
+** Not Fixed yet. I'll Update later **
