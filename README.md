@@ -31,7 +31,7 @@ Step to install and setup manually:
 - Download latest version. You can choose binary format or complete format
 ```
 Different Gradle binary format and complete format
-> gradle-x.xx-all.zip file will have binaries, sources and documentation, gradle-x.xx-bin.zip will have only binaries 
+>gradle-x.xx-all.zip file will have binaries, sources and documentation, gradle-x.xx-bin.zip will have only binaries 
 (That should be enough as you dont need any samples/docs)
 © copied from San
 ```
@@ -86,31 +86,42 @@ You can install with a package manager. Go check [their website](https://gradle.
 3. Open Projects from File System...
 4. Choose directory, in my case F:\eclipse-workspace\webservice, click finish
 
-	![Image of Choose directory existing project](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/import-project.jpg)
+	![Image of Choose directory existing project](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/import-projects.jpg)
 
 5. Create new package com.link.webservice.entity under src/main/java
-6. Create new class Alamat on package com.link.webservice.entity
+6. Create POJO (Plain Old Java Object) Alamat.java on package com.link.webservice.entity
 	
 	```Java
 	package com.link.webservice.entity;
+
 	@Entity
 	@Table(name="alamat")
 	@Data
+
 	public class Alamat {
+
 		@Id
 	 	@GeneratedValue(generator="uuid")
 	 	@GenericGenerator(name = "uuid", strategy = "uuid2")
+
 	 	private String id;
+
 	 	@Column(nullable=false)
 	 	private String jalan;
+
 	 	@Column(nullable=false)
 	 	private String kota;
+
 	 	@Column(nullable=false)
 	 	private String propinsi;
+
 	 	@Column(nullable=false, length=5)
 	 	private int kodepos;
 	}
 	```
+
+
+---
 
 
 ### Error Handling ###
