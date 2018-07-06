@@ -76,7 +76,7 @@ You can install with a package manager. Go check [their website](https://gradle.
 - Choose Dependencies. You can search dependencies, for now I just use MySQL 
 - Click Generate Project
 
-![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/Generate-Spring-Boot.JPG)
+![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/Generate-Spring-Boot.png)
 
 
 ### Starting Create Project ###
@@ -85,7 +85,7 @@ You can install with a package manager. Go check [their website](https://gradle.
 3. Open Projects from File System...
 4. Choose directory, in my case `F:\eclipse-workspace\webservice`, click finish
 
-	![Image of Choose directory existing project](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/import-projects.jpg)
+	![Image of Choose directory existing project](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/import-project.jpg)
 
 5. Create new package `com.link.webservice.entity` under `src/main/java`
 6. Create POJO (Plain Old Java Object) `Alamat.java` on package `com.link.webservice.entity`
@@ -126,10 +126,10 @@ You can install with a package manager. Go check [their website](https://gradle.
 ### Error Handling ###
 
 - The import org.springframework cannot be resolved
-file: WebserviceApplication.java 
-package: com.link.webservice 
-line: 3 import org.springframework.boot.SpringApplication; 
-how to fix
+file: WebserviceApplication.java   
+package: com.link.webservice   
+line: 3 import org.springframework.boot.SpringApplication;   
+how to fix  
 1. Right click project, click import...
 
 	![Image of The import org.springframework cannot be resolved 1](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/error-fix-a-1.jpg)
