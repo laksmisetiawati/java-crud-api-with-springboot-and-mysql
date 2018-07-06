@@ -82,52 +82,66 @@ You can install with a package manager. Go check [their website](https://gradle.
 
 ### Starting Create Project ###
 1. Extract generated spring project folder, my folder named 'webservice'
-2. Click File > New > Others...
+2. Copy-paste 'webservice' into eclipse workspace location, in my case F:\eclipse-workspace
+3. Open Projects from File System...
+4. Choose directory, in my case F:\eclipse-workspace\webservice, click finish
 
-	![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-1.jpg)
+	![Image of Choose directory existing project](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/import-project.jpg)
 
-3. Name your project name, my folder named 'java-webservice', then click finish
-
-	![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-2.jpg)
-
-	![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/create-new-grandle-project-3.jpg)
-
-4. Copy file build.gradle from 'webservice' folder and replace file build.gradle from 'java-webservice' folder. For example: 
+5. Create new package com.link.webservice.entity under src/main/java
+6. Create new class Alamat on package com.link.webservice.entity
 	
-	```gradle
-	buildscript {
-		ext {
-			springBootVersion = '2.0.3.RELEASE'
-		}
-		repositories {
-			mavenCentral()
-		}
-		dependencies {
-			classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		}
-	}
-	apply plugin: 'java'
-	apply plugin: 'eclipse'
-	apply plugin: 'org.springframework.boot'
-	apply plugin: 'io.spring.dependency-management'
-	group = 'com.example'
-	version = '0.0.1-SNAPSHOT'
-	sourceCompatibility = 1.8
-	// In this section you declare where to find the dependencies of your project
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		compile('org.springframework.boot:spring-boot-starter')
-		runtime('mysql:mysql-connector-java')
-		testCompile('org.springframework.boot:spring-boot-starter-test')
+	```Java
+	package com.link.webservice.entity;
+	@Entity
+	@Table(name="alamat")
+	@Data
+	public class Alamat {
+		@Id
+	 	@GeneratedValue(generator="uuid")
+	 	@GenericGenerator(name = "uuid", strategy = "uuid2")
+	 	private String id;
+	 	@Column(nullable=false)
+	 	private String jalan;
+	 	@Column(nullable=false)
+	 	private String kota;
+	 	@Column(nullable=false)
+	 	private String propinsi;
+	 	@Column(nullable=false, length=5)
+	 	private int kodepos;
 	}
 	```
 
-5. 
+
+### Error Handling ###
+
+- The import org.springframework cannot be resolved
+file: WebserviceApplication.java
+package: com.link.webservice
+line: 3 import org.springframework.boot.SpringApplication;
+how to fix
+1. Right click project, click import...
+
+	![Image of The import org.springframework cannot be resolved 1](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/error-fix-a-1.jpg)
+
+2. Choose Gradle > Existing Gradle Project, click next
+
+	![Image of The import org.springframework cannot be resolved 1](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/error-fix-a-2.jpg)
+
+3. If you see welcome page, keep click next, if not just skip this step
+4. Browse current project root directory, in my case F:\eclipse-workspace\webservice
+5. Click finish
+
+	![Image of The import org.springframework cannot be resolved 1](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/error-fix-a-3.jpg)
 
 
 
+
+---
+
+
+**Notes**
+- Please moved all files from webservice into parent path
 
 
 ---
