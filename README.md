@@ -31,8 +31,7 @@ Step to install and setup manually:
 - Download latest version. You can choose binary format or complete format
 ```
 Different Gradle binary format and complete format
->gradle-x.xx-all.zip file will have binaries, sources and documentation, gradle-x.xx-bin.zip will have only binaries 
-(That should be enough as you dont need any samples/docs)
+> gradle-x.xx-all.zip file will have binaries, sources and documentation, gradle-x.xx-bin.zip will have only binaries (That should be enough as you dont need any samples/docs)
 © copied from San
 ```
 - Extract zip file and copy-paste to your folder, for example C:\Program Files\Gradle
