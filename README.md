@@ -200,24 +200,24 @@ You can install with a package manager. Go check [their website](https://gradle.
 
 ### Error Handling ###
 
-- The import org.springframework cannot be resolved
+- The import org.springframework cannot be resolved   
 file: WebserviceApplication.java   
 package: com.link.webservice   
-line: 3 import org.springframework.boot.SpringApplication;   
-how to fix  
-1. Right click project, click import...
+line: 3 `import org.springframework.boot.SpringApplication;`   
+how to fix:   
+	1. Right click project, click import...
 
-	![Image of The import org.springframework cannot be resolved 1](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/error-fix-a-1.jpg)
+		![Image of The import org.springframework cannot be resolved 1](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/error-fix-a-1.jpg)
 
-2. Choose Gradle > Existing Gradle Project, click next
+	2. Choose Gradle > Existing Gradle Project, click next
 
-	![Image of The import org.springframework cannot be resolved 1](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/error-fix-a-2.jpg)
+		![Image of The import org.springframework cannot be resolved 1](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/error-fix-a-2.jpg)
 
-3. If you see welcome page, keep click next, if not just skip this step
-4. Browse current project root directory, in my case F:\eclipse-workspace\webservice
-5. Click finish
+	3. If you see welcome page, keep click next, if not just skip this step
+	4. Browse current project root directory, in my case F:\eclipse-workspace\webservice
+	5. Click finish
 
-	![Image of The import org.springframework cannot be resolved 1](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/error-fix-a-3.jpg)
+		![Image of The import org.springframework cannot be resolved 1](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/error-fix-a-3.jpg)
 
 
 
