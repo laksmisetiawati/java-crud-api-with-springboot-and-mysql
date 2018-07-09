@@ -8,6 +8,7 @@ Learning Java web services with Spring. Screenshots and example of codes are pro
 - [Java](https://java.com) - version 1.8.0
 - [Eclipse IDE for Java Developers](http://www.eclipse.org/) - version 4.8.0
 - [Buildship Gradle Integration to Eclipse](https://projects.eclipse.org/projects/tools.buildship) - version 2.0
+- [Project Lombok](https://projectlombok.org/) - version 1.18.0
 - [Gradle](https://gradle.org/) - version 4.8.1
 - [Spring projects](https://start.spring.io/) - version 2.0.3
 
@@ -31,7 +32,7 @@ Step to install and setup manually:
 - Download latest version. You can choose binary format or complete format
 ```
 Different Gradle binary format and complete format
-> gradle-x.xx-all.zip file will have binaries, sources and documentation, gradle-x.xx-bin.zip will have only binaries (That should be enough as you dont need any samples/docs)
+>gradle-x.xx-all.zip file will have binaries, sources and documentation, gradle-x.xx-bin.zip will have only binaries (That should be enough as you dont need any samples/docs)<
 © copied from San
 ```
 - Extract zip file and copy-paste to your folder, for example C:\Program Files\Gradle
@@ -67,6 +68,18 @@ OS:           Windows 10 10.0 amd64
 You can install with a package manager. Go check [their website](https://gradle.org/install/)
 
 
+### Download, Install & Setup Project Lombok ###
+- Download Lombok from [here](https://projectlombok.org/download)
+- When installing Lombok, choose Eclipse as IDE, click Install/Update
+- Add lombok.jar to your project
+- Put below code on build.gradle dependencies
+	```gradle
+	compileOnly 'org.projectlombok:lombok:1.18.0'
+	```
+- Restart your Eclipse 
+- Rebuild your project
+
+
 ### Generate Spring Boot ###
 - Choose Grandle Project
 - Choose Java
@@ -76,7 +89,7 @@ You can install with a package manager. Go check [their website](https://gradle.
 - Choose Dependencies. You can search dependencies, for now I just use MySQL 
 - Click Generate Project
 
-![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/Generate-Spring-Boot.png)
+	![Image of Generate Spring Boot](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/Generate-Spring-Boot.png)
 
 
 ### Starting Create Project ###
@@ -87,10 +100,52 @@ You can install with a package manager. Go check [their website](https://gradle.
 
 	![Image of Choose directory existing project](https://github.com/laksmisetiawati/java-web-services-with-springboot-and-mysql/blob/master/img/import-project.jpg)
 
-5. Create new package `com.link.webservice.entity` under `src/main/java`
-6. Create POJO (Plain Old Java Object) `Alamat.java` on package `com.link.webservice.entity`
+5. Create new database, in this case I use 'latihan'
+	```mysql
+	create database latihan;
+	```
+
+6. Open build.gradle and add Spring Boot's dependecies
+	```gradle
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	compile('org.springframework.boot:spring-boot-starter-security')
+	```
+	for example, below generated build.gradle from Spring Boot
+	```gradle
+	dependencies {
+		compile('org.springframework.boot:spring-boot-starter')
+		runtime('mysql:mysql-connector-java')
+		testCompile('org.springframework.boot:spring-boot-starter-test')
+	}
+	```
+	below updated dependencie
+	```gradle
+	dependencies {
+		compile('org.springframework.boot:spring-boot-starter-data-jpa')
+		compile('org.springframework.boot:spring-boot-starter-web')
+		compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+		compile('org.springframework.boot:spring-boot-starter-security')
+		runtime('mysql:mysql-connector-java')
+		testCompile('org.springframework.boot:spring-boot-starter-test')
+	}
+	```
+
+7. Add database config on `src/main/resources/application.properties`
+	```
+	spring.datasource.url=jdbc:mysql://192.168.227.133:3306/latihan
+	spring.datasource.username=root
+	spring.datasource.password=admin
+	spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+	```
+
+8. Create new package `com.link.webservice.entity` under `src/main/java`
+
+9. Create POJO (Plain Old Java Object) `Alamat.java` on package `com.link.webservice.entity`.
+	This file will be used to create table on database
 	
-	```Java
+	```java
 	package com.link.webservice.entity;
 
 	@Entity
@@ -119,8 +174,28 @@ You can install with a package manager. Go check [their website](https://gradle.
 	}
 	```
 
+10. Add config on application.properties for database connection
+	```
+	spring.datasource.url=jdbc:mysql://192.168.227.133:3306/latihan
+	spring.datasource.username=root
+	spring.datasource.password=admin
+	spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+	```
+
+11. 
+
+
 
 ---
+
+
+### NOTES: ###
+- Every update on build.gradle, you need to run gradle command `gradle eclipse`  to update dependencies into eclipse
+
+
+
+---
+
 
 
 ### Error Handling ###
