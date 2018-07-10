@@ -6,6 +6,7 @@
 - [Project Lombok](https://projectlombok.org/) - version 1.18.0
 - [Gradle](https://gradle.org/) - version 4.8.1
 - [Spring projects](https://start.spring.io/) - version 1.5.14
+- [MySQL](https://www.mysql.com/) - version 5.7.10
 
 ## Step ##
 - copy generated project dari Spring Boot ke workspace eclipse
